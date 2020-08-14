@@ -792,5 +792,7 @@ export const ru: LangType = {
     'password.strength.tip.letter': 'At least One upper case and lower case letter',
     'password.strength.tip.digit': 'At least One digit',
 
+    'page.body.markets.title': 'Страница рынков. Доступно {marketsCount} рынков',
+
     ...nationalitiesNames,
 };
