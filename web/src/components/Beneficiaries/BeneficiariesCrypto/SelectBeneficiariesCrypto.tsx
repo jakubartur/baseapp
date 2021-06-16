@@ -18,13 +18,13 @@ interface SelectBeneficiariesCrypto {
 
 export const SelectBeneficiariesCrypto = (props: SelectBeneficiariesCrypto) => {
     const { currency, blockchainKey } = props;
- 
+
     const { formatMessage } = useIntl();
 
     const currencies = useSelector(selectCurrencies);
     const beneficiaries: Beneficiary[] = useSelector(selectBeneficiaries);
     const currencyItem = currencies.find(item => item.id === currency);
-    const blockchainItem = currencyItem?.blockchain_currencies.find(item => item.blockchain_key === blockchainKey);
+    const blockchainItem = currencyItem?.networks.find(item => item.blockchain_key === blockchainKey);
     const estimatedValueFee = +currencyItem?.price * +blockchainItem?.withdraw_fee;
 
 

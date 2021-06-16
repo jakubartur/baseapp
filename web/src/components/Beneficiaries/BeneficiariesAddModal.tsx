@@ -319,7 +319,7 @@ const BeneficiariesAddModalComponent: React.FC<Props> = (props: Props) => {
     }, [coinAddress]);
 
     const handleChangenBlockchain = (index: number) => {
-        const blockchainItem = currencyItem.blockchain_currencies[index];
+        const blockchainItem = currencyItem.networks[index];
 
         setCoinBlockchainName({
             blockchainKey: blockchainItem.blockchain_key,
@@ -354,7 +354,7 @@ const BeneficiariesAddModalComponent: React.FC<Props> = (props: Props) => {
                 {renderAddAddressModalBodyItem('coinAddress')}
                 {!coinAddressValid && coinAddress && renderInvalidAddressMessage}
                 <DropdownBeneficiary
-                    list={currencyItem.blockchain_currencies.map(renderDropdownItem(currencyItem.name, currencyItem.precision, currencyItem.price))}
+                    list={currencyItem.networks.map(renderDropdownItem(currencyItem.name, currencyItem.precision, currencyItem.price))}
                     selectedValue={coinBlockchainName}
                     onSelect={handleChangenBlockchain}
                     placeholder={formatMessage({ id: 'page.body.quick.exchange.label.currency' })}

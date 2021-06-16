@@ -7,12 +7,12 @@ Access-Control-Allow-Credentials: true
 
 {
   "deposit": {
-    "minimum_level": 3
+    "minimum_level": 1
   },
   "withdraw": {
-    "minimum_level": 3
+    "minimum_level": 1
   },
   "trading": {
-    "minimum_level": 3
+    "minimum_level": 1
   }
 }

@@ -115,7 +115,7 @@ const WalletWithdrawBodyComponent = props => {
             </div>
         );
     };
-    
+
     useBeneficiariesFetch();
     useCurrenciesFetch();
 
@@ -132,7 +132,7 @@ const WalletWithdrawBodyComponent = props => {
     return (
         <div className="cr-mobile-wallet-withdraw-body">
             <Withdraw
-                blockchain_currencies={currencyItem.blockchain_currencies}
+                networks={currencyItem.networks}
                 isMobileDevice
                 price={currencyItem.price}
                 name={currencyItem.name}
